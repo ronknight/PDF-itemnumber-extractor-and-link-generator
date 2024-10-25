@@ -1,62 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PDF Item Number Extractor and Links Generator</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 PDF Item Number Extractor and 🛠️ Links Generator</title>
 </head>
 <body>
-  <h1>🔍 PDF Item Number Extractor and 🛠️ Links Generator</h1>
-  <form id="uploadForm">
-    <label for="pdfFile">Choose a PDF file to upload:</label>
-    <input type="file" id="pdfFile" name="pdf" accept="application/pdf">
-    <button type="submit">Upload and Extract</button>
-  </form>
-  <div id="result"></div>
-
-  <script>
-    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const pdfFile = document.getElementById('pdfFile').files[0];
-      if (!pdfFile) {
-        alert('Please upload a PDF file.');
-        return;
-      }
-
-      const formData = new FormData();
-      formData.append('pdf', pdfFile);
-
-      try {
-        const response = await fetch('/upload', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (!response.ok) throw new Error('Error uploading file');
-
-        const data = await response.json();
-
-        if (data.items) {
-          const resultDiv = document.getElementById('result');
-          resultDiv.innerHTML = `<h2>Extracted Item Numbers and Links</h2><ul>` +
-            data.items.map(item => `
-              <li>
-                <strong>${item.item}</strong>: 
-                <a href="${item.fsgm_link}" target="_blank">4sgm Link</a> |
-                <a href="${item.google_link}" target="_blank">Google Link</a>
-              </li>
-            `).join('') +
-            '</ul>';
-        } else {
-          alert(data.error || 'No item numbers found in the PDF.');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert('There was an error processing your file. Please try again.');
-      }
-    });
-  </script>
+    <h1>🔍 PDF Item Number Extractor and 🛠️ Links Generator</h1>
+    <form action="{{ url_for('upload_pdf') }}" method="post" enctype="multipart/form-data">
+        <label for="pdf">Choose a PDF file:</label>
+        <input type="file" name="pdf" id="pdf" accept="application/pdf" required>
+        <button type="submit">Upload and Extract</button>
+    </form>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracted Item Numbers and Links</title>
+</head>
+<body>
+    <h2>Extracted Item Numbers and Links</h2>
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.item }}</strong>: 
+                <a href="{{ item.fsgm_link }}" target="_blank">4sgm Link</a> | 
+                <a href="{{ item.google_link }}" target="_blank">Google Link</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Upload Another PDF</a>
+</body>
+</html>
