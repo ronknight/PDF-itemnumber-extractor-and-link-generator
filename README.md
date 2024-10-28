@@ -1,4 +1,4 @@
-### 🚀 [PDF Item Number Extractor and Link Generator](https://github.com/ronknight/PDF-itemnumber-extractor-and-link-generator)
+<h1 align="center">### 🚀 [PDF Item Number Extractor and Link Generator](https://github.com/ronknight/PDF-itemnumber-extractor-and-link-generator)</h1>
 
 <h4 align="center">🔍 A Python-based tool to extract item numbers from PDF files and generate corresponding links for streamlined catalog or product management.</h4>
 
