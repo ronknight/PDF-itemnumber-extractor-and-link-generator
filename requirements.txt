@@ -13,9 +13,7 @@ requests==2.28.1
 # Beautiful Soup for parsing HTML (used in conjunction with requests)
 beautifulsoup4==4.11.1
 
-# OS library dependencies (OS library itself does not need to be installed via pip)
-# regex for complex regular expression operations
-regex==2022.3.15
-
 # Logging (Python's built-in logging module does not require a package, but included here for completeness)
 loguru==0.6.0
+
+Werkzeug==0.16.1
