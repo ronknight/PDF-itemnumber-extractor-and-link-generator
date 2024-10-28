@@ -1,4 +1,21 @@
-Flask==3.0.2
-Flask-Cors==3.0.10
-pdfplumber==0.5.28
+# Flask for creating a web server and handling HTTP requests
+Flask==2.1.2
+
+# Flask-CORS to enable Cross-Origin Resource Sharing
+Flask-CORS==3.0.10
+
+# pdfplumber for advanced PDF parsing
+pdfplumber==0.7.4
+
+# Requests for making HTTP requests (e.g., web scraping)
 requests==2.28.1
+
+# Beautiful Soup for parsing HTML (used in conjunction with requests)
+beautifulsoup4==4.11.1
+
+# OS library dependencies (OS library itself does not need to be installed via pip)
+# regex for complex regular expression operations
+regex==2022.3.15
+
+# Logging (Python's built-in logging module does not require a package, but included here for completeness)
+loguru==0.6.0

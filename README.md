@@ -1,4 +1,4 @@
-<h1 align="center">🚀 PDF Item Number Extractor and Link Generator</h1>
+<h1 align="center">🚀 <a href="https://github.com/ronknight/PDF-itemnumber-extractor-and-link-generator">PDF Item Number Extractor and Link Generator</a></h1>
 
 <h4 align="center">🔍 A Python-based tool to extract item numbers from PDF files and generate corresponding links for streamlined catalog or product management.</h4>
 
@@ -10,7 +10,6 @@
   <a href="https://youtube.com/@PinoyITSolution"><img src="https://img.shields.io/youtube/channel/subscribers/UCeoETAlg3skyMcQPqr97omg"></a>
   <a href="https://github.com/ronknight/PDF-itemnumber-extractor-and-link-generator/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
   <a href="https://github.com/ronknight/PDF-itemnumber-extractor-and-link-generator/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Made%20with-Love-1f425f.svg"></a>
   <a href="https://github.com/ronknight"><img src="https://img.shields.io/badge/Made%20with%20%F0%9F%A4%8D%20by%20-Ronknight%20-%20red"></a>
 </p>
 
@@ -60,7 +59,6 @@ The **PDF Item Number Extractor and Link Generator** is a Python tool designed t
    python extract_and_link.py --input pdfs --output results.csv
    ```
    This command will process each PDF in the `pdfs` folder, extract item numbers, and generate links stored in `results.csv`.
-
 
 ## 📊 Visualization
 
